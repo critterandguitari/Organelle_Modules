@@ -1,4 +1,4 @@
-#N canvas 42 63 1790 658 10;
+#N canvas 43 60 1790 658 10;
 #X obj 1279 118 catch~ samp_voice_out;
 #X obj 660 344 i;
 #X obj 660 311 * 100;
@@ -46,8 +46,6 @@ randomly for each key. second argument is the key number starting from
 #X obj 727 354 s hr-\$1-decay-label;
 #X obj 952 318 r hr-\$1-notes-in;
 #X obj 302 335 s hr-\$1-knob-detent;
-#X obj 1280 164 throw~ hr-\$1-outL;
-#X obj 1411 164 throw~ hr-\$1-outR;
 #X obj 969 107 sampler-voice 6 5 \$1;
 #X obj 1057 434 s hr-\$1-alloff;
 #X obj 1025 411 t a b;
@@ -78,8 +76,10 @@ randomly for each key. second argument is the key number starting from
 #X obj 971 129 sampler-voice 12 11 \$1;
 #X obj 974 153 sampler-voice 18 17 \$1;
 #X obj 974 175 sampler-voice 24 23 \$1;
-#X connect 0 0 44 0;
-#X connect 0 0 45 0;
+#X obj 1280 164 s~ hr-\$1-outL;
+#X obj 1411 164 s~ hr-\$1-outR;
+#X connect 0 0 74 0;
+#X connect 0 0 75 0;
 #X connect 1 0 16 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -105,8 +105,8 @@ randomly for each key. second argument is the key number starting from
 #X connect 18 0 36 0;
 #X connect 19 0 38 0;
 #X connect 20 0 39 0;
-#X connect 21 0 50 0;
-#X connect 22 0 48 0;
+#X connect 21 0 48 0;
+#X connect 22 0 46 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 0;
@@ -123,7 +123,7 @@ randomly for each key. second argument is the key number starting from
 #X connect 34 0 3 0;
 #X connect 42 0 21 0;
 #X connect 42 0 22 0;
+#X connect 46 0 47 0;
+#X connect 46 1 45 0;
 #X connect 48 0 49 0;
-#X connect 48 1 47 0;
-#X connect 50 0 51 0;
-#X connect 50 1 52 0;
+#X connect 48 1 50 0;
