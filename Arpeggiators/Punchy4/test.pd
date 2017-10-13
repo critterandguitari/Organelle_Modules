@@ -1,0 +1,17 @@
+#N canvas 44 154 776 386 10;
+#X obj 297 101 s pun-1-notes-in;
+#X obj 297 66 r notes;
+#X obj 233 153 r pun-1-notes-out;
+#X obj 233 175 print fertig;
+#X obj 487 62 r knob1;
+#X obj 487 84 s pun-1-velo;
+#X obj 483 161 r aux;
+#X obj 483 183 s pun-1-aux;
+#X obj 622 228 r pun-1-state-label;
+#X obj 622 250 s screenLine5;
+#X obj 128 90 Punchy pun 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;

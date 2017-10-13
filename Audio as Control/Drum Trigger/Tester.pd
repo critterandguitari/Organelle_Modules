@@ -1,0 +1,5 @@
+#N canvas 113 202 685 412 10;
+#X obj 26 34 r~ inL;
+#X obj 26 56 s~ drum-in;
+#X obj 492 52 DrumTrigger;
+#X connect 0 0 1 0;
